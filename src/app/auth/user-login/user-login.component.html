@@ -1,105 +1,52 @@
-<div *ngIf="!authService.isUserEmailLoggedIn">
-
-    <div style="width: 350px;" *ngIf="isNewUser">
-        <div class="row">
-            <div class="col-lg-12 ">
-                <div class="img-wrap">
-                    <img src="../../assets/img/header-logo.png" alt="">
-                </div>
-            </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="img-wrap">
+            <img src="../../assets/img/header-logo.png" alt="">
         </div>
-
-        <p *ngIf="errorMessage.length > 0" class="text-danger">
-            {{errorMessage}}</p>
-
-        <p *ngIf="error.message.length > 0" class="text-danger">
-            {{error.message}}</p>
-
-        <form (ngSubmit)="onSignUp()">
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="text-center">Email</p>
-                    </div>
-                    <div class="col-lg-12">
-                        <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="email">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="text-center">Password</p>
-                    </div>
-                    <div class="col-lg-12">
-                        <input type="password" class="form-control" id="password" name="password" required
-                               [(ngModel)]="password">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center mt-2">
-                    <button type="submit" class="btn btn-primary">Register</button>
-                </div>
-                <div class="col-lg-12 d-flex justify-content-center mt-4">
-                    <button type="button" class="btn btn-primary" (click)="changeForm()">Log in</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-
-    <div style="width: 350px;" *ngIf="!isNewUser">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="img-wrap">
-                    <img src="../../assets/img/header-logo.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <p *ngIf="errorMessage.length > 0" class="text-danger">
-            {{errorMessage}}</p>
-
-        <p *ngIf="error.message.length > 0" class="text-danger">
-            {{error.message}}</p>
-
-        <form (ngSubmit)="onLoginEmail()">
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="text-center">Email</p>
-                    </div>
-                    <div class="col-lg-12">
-                        <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="email">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="text-center">Password</p>
-                    </div>
-                    <div class="col-lg-12">
-                        <input type="password" class="form-control" id="password" name="password" required
-                               [(ngModel)]="password">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center mt-2">
-                    <button type="submit" class="btn btn-primary">Log in</button>
-                </div>
-                <div class="col-lg-12 d-flex justify-content-center mt-4">
-                    <button type="button" class="btn btn-primary" (click)="changeForm()">Register</button>
-                </div>
-            </div>
-        </form>
-
-
-
-
     </div>
 </div>
+
+<p *ngIf="errorMessage.length > 0" class="text-danger">
+    {{errorMessage}}</p>
+
+<p *ngIf="error.message.length > 0" class="text-danger">
+    {{error.message}}</p>
+
+<form (ngSubmit)="onLoginEmail()">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-center">Email</p>
+            </div>
+            <div class="col-lg-12">
+                <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="email">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-center">Password</p>
+            </div>
+            <div class="col-lg-12">
+                <input type="password" class="form-control" id="password" name="password" required
+                       [(ngModel)]="password">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center mt-2">
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </div>
+        <div class="col-lg-12 d-flex justify-content-center mt-4">
+            <button type="button" class="btn btn-primary" (click)="changePageRegistr()">Register</button>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+

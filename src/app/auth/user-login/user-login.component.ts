@@ -26,22 +26,8 @@ export class UserLoginComponent implements OnInit {
     this.error = { name: '', message: '' };
   }
 
-  changeForm() {
-    this.isNewUser = !this.isNewUser
-  }
-
-  onSignUp(): void {
-    this.clearErrorMessage()
-
-    if (this.validateForm(this.email, this.password)) {
-      this.authService.signUpWithEmail(this.email, this.password)
-        .then(() => {
-          this.router.navigate(['/user'])
-        }).catch(_error => {
-          this.error = _error
-          this.router.navigate(['/'])
-        })
-    }
+  changePageRegistr() {
+      this.router.navigate(['/registr']);
   }
 
   onLoginEmail(): void {

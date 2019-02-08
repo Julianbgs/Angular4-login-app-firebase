@@ -12,12 +12,14 @@ import {AuthService} from './auth/auth.service';
 import {AppComponent} from './app.component';
 import {UserLoginComponent} from './auth/user-login/user-login.component';
 import {UserInfoComponent} from './auth/user-info/user-info.component';
+import { UserFormComponent } from './auth/user-form/user-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
