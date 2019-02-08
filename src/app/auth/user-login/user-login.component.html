@@ -1,8 +1,6 @@
-{{checkUserInfo()}}
-
 <div *ngIf="!authService.isUserEmailLoggedIn">
 
-    <div style="width: 350px;" *ngIf="!isNewUser">
+    <div style="width: 350px;" *ngIf="isNewUser">
         <div class="row">
             <div class="col-lg-12 ">
                 <div class="img-wrap">
@@ -52,7 +50,7 @@
     </div>
 
 
-    <div style="width: 350px;" *ngIf="isNewUser">
+    <div style="width: 350px;" *ngIf="!isNewUser">
         <div class="row">
             <div class="col-lg-12">
                 <div class="img-wrap">
