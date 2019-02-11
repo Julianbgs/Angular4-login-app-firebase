@@ -18,12 +18,14 @@ export class AuthService {
   }
 
   get currentUserId(): string {
-    return (this.authState !== null) ? this.authState.uid : ''
+    return (this.authState !== null) ? this.authState.uid : '';
   }
 
   get currentUserName(): string {
-    return this.authState['email']
+    return this.authState['email'];
   }
+
+
 
   get currentUser(): any {
     return (this.authState !== null) ? this.authState : null;
